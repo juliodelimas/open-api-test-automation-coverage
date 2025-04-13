@@ -1,3 +1,5 @@
+[![npm version](https://img.shields.io/npm/v/open-api-test-automation-coverage)](https://www.npmjs.com/package/open-api-test-automation-coverage)
+
 # OpenAPI Test Automation Coverage
 
 A simple CLI tool to check how much of your OpenAPI-defined API is covered by your SuperTest-based integration tests.
@@ -30,6 +32,11 @@ Or install it globally (optional):
 ```bash
 npm install -g .
 ```
+
+Or install it using npm:
+
+```bash
+npm install -g open-api-test-automation-coverage
 
 Then use it anywhere as:
 
