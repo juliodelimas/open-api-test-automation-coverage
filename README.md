@@ -1,4 +1,4 @@
-# API Test Coverage
+# OpenAPI Test Automation Coverage
 
 A simple CLI tool to check how much of your OpenAPI-defined API is covered by your SuperTest-based integration tests.
 
@@ -14,15 +14,15 @@ A simple CLI tool to check how much of your OpenAPI-defined API is covered by yo
 Clone the project and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/api-test-coverage.git
-cd api-test-coverage
+git clone https://github.com/juliodelimas/open-api-test-automation-coverage.git
+cd open-api-test-automation-coverage
 npm install
 ```
 
 You can run it directly using `npx`:
 
 ```bash
-npx ./bin/api-test-coverage.js --spec ./path/to/openapi.yaml --tests ./path/to/tests
+npx ./bin/open-api-test-automation-coverage.js --spec ./path/to/openapi.yaml --tests ./path/to/tests
 ```
 
 Or install it globally (optional):
@@ -34,13 +34,13 @@ npm install -g .
 Then use it anywhere as:
 
 ```bash
-api-test-coverage --spec ./spec/openapi.yaml --tests ./tests
+open-api-test-automation-coverage --spec ./spec/openapi.yaml --tests ./tests
 ```
 
 ## Example usage
 
 ```bash
-api-test-coverage \
+open-api-test-automation-coverage \
   --spec ./examples/openapi.yaml \
   --tests ./examples \
   --suffix .test.js

@@ -1,0 +1,25 @@
+{
+  "name": "open-api-test-automation-coverage",
+  "version": "1.0.0",
+  "description": "A simple CLI tool to check how much of your OpenAPI-defined API is covered by your SuperTest-based integration tests.",
+  "main": "index.js",
+  "bin": {
+    "open-api-test-automation-coverage": "./bin/open-api-test-automation-coverage.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliodelimas/open-api-test-automation-coverage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/juliodelimas/open-api-test-automation-coverage/issues"
+  },
+  "homepage": "https://github.com/juliodelimas/open-api-test-automation-coverage#readme",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "js-yaml": "^4.1.0"
+  }
+}
