@@ -18,16 +18,16 @@ function getAllTestFiles(dirPath, suffix = '.test.js', allFiles = []) {
     return allFiles;
 }
 
-
 function extractSupertestCalls(content) {
-    const regex = /request\s*\([^)]*\)\s*\.\s*(get|post|put|delete|patch)\s*\(\s*['"`]([^'"`]+)['"`]\s*\)/gi;
+    const callRegex = /request\s*\([^)]*\)\s*\.\s*(get|post|put|delete|patch)\s*\(\s*['"]([^'"]+)['"]\s*\)[\s\S]*?\.expect\s*\(\s*(\d{3})\s*\)/gi;
     const matches = [];
     let match;
 
-    while ((match = regex.exec(content)) !== null) {
+    while ((match = callRegex.exec(content)) !== null) {
         matches.push({
             method: match[1].toUpperCase(),
             path: match[2],
+            statusCode: match[3]
         });
     }
 
