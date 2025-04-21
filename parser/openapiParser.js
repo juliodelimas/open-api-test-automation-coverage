@@ -18,11 +18,15 @@ function parseOpenApi(filePath) {
   const endpoints = [];
 
   for (const [route, methods] of Object.entries(spec.paths)) {
-    for (const method of Object.keys(methods)) {
-      endpoints.push({
-        method: method.toUpperCase(),
-        path: route
-      });
+    for (const [method, operation] of Object.entries(methods)) {
+      const responses = operation.responses || {};
+      for (const statusCode of Object.keys(responses)) {
+        endpoints.push({
+          method: method.toUpperCase(),
+          path: route,
+          statusCode: statusCode
+        });
+      }
     }
   }
 
