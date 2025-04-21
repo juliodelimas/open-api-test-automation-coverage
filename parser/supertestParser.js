@@ -18,9 +18,8 @@ function getAllTestFiles(dirPath, suffix = '.test.js', allFiles = []) {
     return allFiles;
 }
 
-
 function extractSupertestCalls(content) {
-    const callRegex = /request\s*\([^)]*\)\s*\.\s*(get|post|put|delete|patch)\s*\(\s*['"`]([^'"`]+)['"`]\s*\)[\s\S]*?\.expect\s*\(\s*(\d{3})\s*\)/gi;
+    const callRegex = /request\s*\([^)]*\)\s*\.\s*(get|post|put|delete|patch)\s*\(\s*['"]([^'"]+)['"]\s*\)[\s\S]*?\.expect\s*\(\s*(\d{3})\s*\)/gi;
     const matches = [];
     let match;
 

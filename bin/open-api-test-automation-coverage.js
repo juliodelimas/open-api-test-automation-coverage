@@ -22,10 +22,10 @@ program.parse();
   const { covered, uncovered } = compare(specEndpoints, testedEndpoints);
 
   console.log('\nCovered endpoints (method path status):');
-covered.forEach(e => console.log(`- [${e.method}] ${e.path} → ${e.statusCode}`));
+  covered.forEach(e => console.log(`- [${e.method}] ${e.path} → ${e.statusCode}`));
 
-console.log('\nUncovered endpoints (missing status codes):');
-uncovered.forEach(e => console.log(`- [${e.method}] ${e.path} → ${e.statusCode}`));
+  console.log('\nUncovered endpoints (missing status codes):');
+  uncovered.forEach(e => console.log(`- [${e.method}] ${e.path} → ${e.statusCode}`));
 
-console.log(`\n📊 Status Code Coverage: ${covered.length} of ${covered.length + uncovered.length} endpoint+status combinations`);
+  console.log(`\n📊 Status Code Coverage: ${covered.length} of ${covered.length + uncovered.length} endpoint+status combinations`);
 })();

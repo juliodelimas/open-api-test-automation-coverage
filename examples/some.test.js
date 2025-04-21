@@ -6,6 +6,10 @@ describe('User API', () => {
     await request(app).get('/users').expect(200);
   });
 
+  it('GET /users should return all users', async () => {
+    await request(app).get('/users').expect(400);
+  });
+
   it('POST /login should authenticate user', async () => {
     await request(app).post('/login')
       .send({ username: 'test', password: 'test' })
